@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <p
+        class="h1 text-center py-4"
+        style="font-family: 'Times New Roman', Times, serif; font-weight: 600"
+      >
+        Registration Form
+      </p>
+      <form
+        class="row g-3 p-2"
+        id="form"
+        onsubmit="return validateForm()"
+        action=""
+      >
+        <div class="col-md-6 p-2" id="firstname">
+          <label for="inputEmail4" class="form-label">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            onblur="validateFirstName()"
+            required
+          />
+          <p class="error"></p>
+        </div>
+        <div class="col-md-6 p-2" id="lastname">
+          <label for="inputPassword4" class="form-label">Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            onblur="validateLastName()"
+            required
+          />
+          <p class="error"></p>
+        </div>
+        <div class="col-md-6 p-2">
+          <label for="inputAddress" class="form-label">Address</label>
+          <textarea
+            class="form-control"
+            placeholder="Plot no. area street..."
+            id="floatingTextarea"
+            required
+          ></textarea>
+        </div>
+
+        <div class="col-md-6 p-2" id="contact_id">
+          <label for="inputAddress2" class="form-label">Contact No</label>
+          <input
+            type="text"
+            class="form-control"
+            onblur="validateContact()"
+            required
+          />
+          <p class="error"></p>
+        </div>
+
+        <div class="col-md-6 p-2">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" required />
+        </div>
+
+        <div class="col-md-6 p-2" id="password">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword4"
+            onblur="passwordStrength()"
+            required
+          />
+          <p class="passstrength"></p>
+        </div>
+
+        <div class="col-md-6 p-2" id="cpassword">
+          <label for="inputEmail4" class="form-label">Confirm Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputEmail4"
+            required
+            onblur="matchPassword()"
+          />
+          <p class="error"></p>
+        </div>
+
+        <div class="col-md-6 p-2">
+          <label for="inputState" class="form-label">Gender</label>
+          <select id="gender" class="form-select" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+          </select>
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="script.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+</html>
